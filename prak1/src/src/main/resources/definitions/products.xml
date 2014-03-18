@@ -5,4 +5,19 @@
         <buildtime>07:45:34</buildtime>
         <price>12.50 €</price>
     </product>
+    <product id="0">
+        <name>Staubmax 250</name>
+        <buildtime>07:45:34</buildtime>
+        <price>12.50 €</price>
+    </product>
+    <product id="0">
+        <name>Staubmax 250</name>
+        <buildtime>07:45:34</buildtime>
+        <price>12.50 €</price>
+    </product>
+    <product id="0">
+        <name>Staubmax 250</name>
+        <buildtime>07:45:34</buildtime>
+        <price>12.50 €</price>
+    </product>
 </products>
