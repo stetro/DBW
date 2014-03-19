@@ -13,6 +13,11 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 
+/**
+ * Main Application Window
+ *
+ * @author stetro
+ */
 public class MainWindow {
     public JPanel mainPanel;
     private XmlFactory xmlFactory;
@@ -101,18 +106,26 @@ public class MainWindow {
         showAllButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
-                String selectedItem = (String) entitySelection2.getSelectedItem();
-                try {
-                    if (selectedItem.equals("Product")) {
-                        xmlTextPane.setText(xmlFactory.marshallProducts(products));
-                    } else {
-                        xmlTextPane.setText(xmlFactory.marshallEmployees(employees));
-                    }
-                } catch (Exception e) {
-                    applicationStatus.setText(e.getMessage());
-                }
+                fillXmlStatementOfAllInTextArea();
             }
         });
+    }
+
+    private void fillXmlStatementOfAllInTextArea() {
+        String selectedItem = (String) entitySelection2.getSelectedItem();
+        try {
+            if (selectedItem.equals("Product")) {
+                Products allProducts = productDao.getAllProducts();
+                String s = xmlFactory.marshallProducts(allProducts);
+                xmlTextPane.setText(s);
+            } else {
+                Employees allEmployees = employeeDao.getAllEmployees();
+                String s = xmlFactory.marshallEmployees(allEmployees);
+                xmlTextPane.setText(s);
+            }
+        } catch (Exception e) {
+            applicationStatus.setText(e.getMessage());
+        }
     }
 
     private void fillXmlStatementInTextArea() {

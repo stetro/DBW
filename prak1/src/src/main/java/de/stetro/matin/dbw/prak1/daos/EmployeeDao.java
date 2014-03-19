@@ -9,6 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * EmployeeDao - does databaseaccess for employee object
+ *
+ * @author stetro
+ */
 public class EmployeeDao {
     private Statement statement;
     private Connection connection;
@@ -22,26 +27,6 @@ public class EmployeeDao {
             statement.close();
         } catch (SQLException e) {
             throw new Exception("Error in creating the product table.");
-        }
-    }
-
-    public Employee getEmployee(int id) throws Exception {
-        try {
-            statement = connection.createStatement();
-            String sql = "select * from employee where id = " + id;
-            ResultSet rs = statement.executeQuery(sql);
-            Employee employee = new Employee();
-            employee.setId(id);
-            if (rs.next()) {
-                employee.setName(rs.getString("name"));
-                employee.getDepartment().setId(rs.getInt("departmentId"));
-                employee.getDepartment().setName(rs.getString("department"));
-                employee.getDepartment().setLeading(rs.getBoolean("departmentLeading"));
-            }
-            statement.close();
-            return employee;
-        } catch (SQLException e) {
-            throw new Exception("Error in get product.");
         }
     }
 

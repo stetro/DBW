@@ -8,6 +8,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * ProductDao - does databaseaccess for product object
+ *
+ * @author stetro
+ */
 public class ProductDao {
     private Statement statement;
     private Connection connection;
@@ -42,25 +47,6 @@ public class ProductDao {
             return products;
         } catch (SQLException e) {
             throw new Exception("Error in get all products.");
-        }
-    }
-
-    public Product getProduct(int id) throws Exception {
-        try {
-            statement = connection.createStatement();
-            String sql = "select * from product where id = " + id;
-            ResultSet rs = statement.executeQuery(sql);
-            Product product = new Product();
-            product.setId(id);
-            if (rs.next()) {
-                product.setName(rs.getString("name"));
-                product.setBuildtime(rs.getString("buildtime"));
-                product.setPrice(rs.getString("price"));
-            }
-            statement.close();
-            return product;
-        } catch (SQLException e) {
-            throw new Exception("Error in get product.");
         }
     }
 

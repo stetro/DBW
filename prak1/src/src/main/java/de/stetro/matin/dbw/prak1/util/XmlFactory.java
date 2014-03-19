@@ -12,9 +12,11 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.StringWriter;
 
-// /Users/stetro/Source/MTIN/DBW/prak1/src/src/main/resources/definitions/products.xml
-// /Users/stetro/Source/MTIN/DBW/prak1/src/src/main/resources/definitions/employees.xml
-
+/**
+ * XmlFactory - does marshalling and parsing
+ *
+ * @author stetro
+ */
 public class XmlFactory {
     public Products parseProductsWithSelectedPath(String filePath) throws Exception {
         File file = new File(filePath);
