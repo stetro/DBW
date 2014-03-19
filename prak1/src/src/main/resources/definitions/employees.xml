@@ -5,16 +5,16 @@
         <name>Steffen Tröster</name>
         <department id="23" leading="false" name="Softwareentwicklung"></department>
     </employee>
-    <employee id="12">
-        <name>Steffen Tröster</name>
+    <employee id="13">
+        <name>Bernd Schneider</name>
+        <department id="24" leading="true" name="Management"></department>
+    </employee>
+    <employee id="14">
+        <name>Michael Schmidt</name>
         <department id="23" leading="false" name="Softwareentwicklung"></department>
     </employee>
-    <employee id="12">
-        <name>Steffen Tröster</name>
-        <department id="23" leading="false" name="Softwareentwicklung"></department>
-    </employee>
-    <employee id="12">
-        <name>Steffen Tröster</name>
-        <department id="23" leading="false" name="Softwareentwicklung"></department>
+    <employee id="15">
+        <name>Joachim Friedrich</name>
+        <department id="23" leading="true" name="Softwareentwicklung"></department>
     </employee>
 </employees>

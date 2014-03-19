@@ -3,19 +3,20 @@
     <xs:element name="products">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="product" maxOccurs="unbounded">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="name" type="xs:string"/>
-                            <xs:element name="buildtime" type="buildtime"/>
-                            <xs:element name="price" type="europrice"/>
-                        </xs:sequence>
-                        <xs:attribute name="id" type="xs:int"/>
-                    </xs:complexType>
+                <xs:element name="product" maxOccurs="unbounded" type="product">
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:complexType name="product">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="buildtime" type="buildtime"/>
+            <xs:element name="price" type="europrice"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int"/>
+    </xs:complexType>
 
     <xs:simpleType name="buildtime">
         <xs:restriction base="xs:string">
