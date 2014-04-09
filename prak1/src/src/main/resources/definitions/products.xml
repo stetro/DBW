@@ -3,21 +3,11 @@
     <product id="0">
         <name>Staubmax 250</name>
         <buildtime>07:45:34</buildtime>
-        <price>12.50 €</price>
+        <price current="euro">12.50</price>
     </product>
     <product id="1">
         <name>Staubmax 230i</name>
         <buildtime>07:05:34</buildtime>
-        <price>14.50 €</price>
-    </product>
-    <product id="2">
-        <name>Behälter Reiniger</name>
-        <buildtime>03:56:12</buildtime>
-        <price>3.43 €</price>
-    </product>
-    <product id="3">
-        <name>Sauger Filter</name>
-        <buildtime>00:34:23</buildtime>
-        <price>5.59 €</price>
+        <price current="euro">14.50</price>
     </product>
 </products>

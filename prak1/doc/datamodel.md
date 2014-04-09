@@ -12,7 +12,7 @@ Deklaratives Wissen
 * Der __Saugermax 250__ bleibt eine Stunde in der Testabteilung.
 * Stratman Elektronik beliefert das Unternhemen aus Köln, sie liefern Platinen.
 
-### Regelwissen
+### Relationswissen oder Regelwissen
 
 * Mitarbeiter arbeiten in einem Unternehmen.
 * In Abteilungen sind mehrere Mitarbeiter beschäftigt.
@@ -39,3 +39,4 @@ Deklaratives Wissen
 ER-Model
 --------
 ![ER Modell Unternehmen](Unternehmen.svg)
+

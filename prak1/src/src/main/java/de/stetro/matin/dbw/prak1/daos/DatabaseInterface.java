@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 /**
  * Connection Singleton
+ *
  * @author stetro
  */
 public class DatabaseInterface {
@@ -14,8 +15,10 @@ public class DatabaseInterface {
 
     public static Connection getConnection() throws SQLException {
         if (connection == null) {
-            connection = DriverManager.getConnection("jdbc:sqlite::memory:");
+            connection = DriverManager.getConnection("jdbc:sqlite:var/sample.db");
         }
         return connection;
     }
+
+
 }

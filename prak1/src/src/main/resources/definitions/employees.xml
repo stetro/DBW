@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="employees.xsd">
     <employee id="12">
         <name>Steffen Tröster</name>
-        <department id="23" leading="false" name="Softwareentwicklung"></department>
+        <department id="23" leading="false">Softwareentwicklung</department>
+        <payment current="euro">2100</payment>
+        <hometown>Wormbach</hometown>
     </employee>
     <employee id="13">
         <name>Bernd Schneider</name>
-        <department id="24" leading="true" name="Management"></department>
-    </employee>
-    <employee id="14">
-        <name>Michael Schmidt</name>
-        <department id="23" leading="false" name="Softwareentwicklung"></department>
-    </employee>
-    <employee id="15">
-        <name>Joachim Friedrich</name>
-        <department id="23" leading="true" name="Softwareentwicklung"></department>
+        <department id="24" leading="true">Management</department>
+        <payment current="euro">3100</payment>
+        <hometown>Koeln</hometown>
     </employee>
 </employees>

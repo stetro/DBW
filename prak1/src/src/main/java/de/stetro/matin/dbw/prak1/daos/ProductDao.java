@@ -1,5 +1,7 @@
 package de.stetro.matin.dbw.prak1.daos;
 
+import de.stetro.matin.dbw.prak1.entities.products.Currenttype;
+import de.stetro.matin.dbw.prak1.entities.products.Price;
 import de.stetro.matin.dbw.prak1.entities.products.Product;
 import de.stetro.matin.dbw.prak1.entities.products.Products;
 
@@ -22,7 +24,7 @@ public class ProductDao {
             connection = DatabaseInterface.getConnection();
             statement = connection.createStatement();
             statement.executeUpdate("drop table if exists product");
-            statement.executeUpdate("create table product (id integer, name string, buildtime string, price string)");
+            statement.executeUpdate("create table product (id integer, name string, buildtime string, price string, priceCurrent string)");
             statement.close();
         } catch (SQLException e) {
             throw new Exception("Error in creating the product table.");
@@ -40,7 +42,9 @@ public class ProductDao {
                 product.setId(rs.getInt("id"));
                 product.setName(rs.getString("name"));
                 product.setBuildtime(rs.getString("buildtime"));
-                product.setPrice(rs.getString("price"));
+                product.setPrice(new Price());
+                product.getPrice().setValue(rs.getFloat("price"));
+                product.getPrice().setCurrent(Currenttype.fromValue(rs.getString("priceCurrent")));
                 products.getProduct().add(product);
             }
             statement.close();
@@ -63,6 +67,7 @@ public class ProductDao {
 
     public String getCreateSqlStatement(Product product) {
         return "insert into product values(\n\t" + product.getId() + ", \n\t'"
-                + product.getName() + "', \n\t'" + product.getBuildtime() + "', \n\t'" + product.getPrice() + "')";
+                + product.getName() + "', \n\t'" + product.getBuildtime() + "', \n\t'" + product.getPrice().getValue()
+                + "', \n\t'" + product.getPrice().getCurrent().value() + "')";
     }
 }

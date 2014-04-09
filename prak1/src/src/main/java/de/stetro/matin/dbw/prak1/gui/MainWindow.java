@@ -180,7 +180,7 @@ public class MainWindow {
         } else {
             Employee employee = employees.getEmployee().get(elementlist.getSelectedIndex());
             try {
-                employeeDao.createProduct(employee);
+                employeeDao.createEmployee(employee);
                 applicationStatus.setText(employee.getName() + " added ...");
             } catch (Exception e) {
                 applicationStatus.setText(e.getMessage());
