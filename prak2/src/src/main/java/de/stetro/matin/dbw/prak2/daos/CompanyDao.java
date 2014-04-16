@@ -91,7 +91,7 @@ public class CompanyDao implements Dao<Companies> {
             Contact contact = c.getContact();
             CompanyTypes companyTypes = c.getTypes();
             String types = StringUtils.join(companyTypes.getType(), ", ");
-            statement = statement + "insert into company values(NULL, '" + c.getName() + "','" + contact.getPhone() + "', '" + contact.getFax() + "', '" + contact.getPerson() + "', '" + contact.getWeb() + "','" + address.getStreet() + "', '" + address.getCity() + "', '" + types + "' )";
+            statement = statement + "insert into company values(NULL, '" + c.getName() + "','" + contact.getPhone() + "', '" + contact.getFax() + "', '" + contact.getPerson() + "', '" + contact.getWeb() + "','" + address.getStreet() + "', '" + address.getCity() + "', '" + types + "' ); ";
         }
         return statement;
     }
