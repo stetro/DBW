@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="products.xsd">
+    <product id="0">
+        <name>Drehmutter</name>
+        <description>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur atque, cum doloremque ea earum
+            eligendi eum eveniet expedita fugiat hic illum incidunt, itaque natus obcaecati, praesentium quaerat
+            sapiente totam.
+        </description>
+    </product>
+</products>

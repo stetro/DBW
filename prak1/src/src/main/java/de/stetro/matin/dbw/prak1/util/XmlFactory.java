@@ -5,10 +5,7 @@ import de.stetro.matin.dbw.prak1.entities.employees.Employees;
 import de.stetro.matin.dbw.prak1.entities.products.Product;
 import de.stetro.matin.dbw.prak1.entities.products.Products;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.*;
 import java.io.File;
 import java.io.StringWriter;
 
@@ -40,10 +37,18 @@ public class XmlFactory {
             JAXBContext jc = null;
             try {
                 jc = JAXBContext.newInstance(Employees.class);
+
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
+                unmarshaller.setEventHandler(new ValidationEventHandler() {
+                    @Override
+                    public boolean handleEvent(ValidationEvent validationEvent) {
+                        return false;
+                    }
+                });
                 return (Employees) unmarshaller.unmarshal(file);
-            } catch (JAXBException e) {
-                throw new Exception("Error during parsing ...");
+            } catch (Exception e) {
+                e.printStackTrace();
+                throw new Exception(e.getMessage());
             }
         } else {
             throw new Exception("File does not exist ...");

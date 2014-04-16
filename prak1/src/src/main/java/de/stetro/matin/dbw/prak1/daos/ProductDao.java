@@ -66,8 +66,11 @@ public class ProductDao {
     }
 
     public String getCreateSqlStatement(Product product) {
-        return "insert into product values(\n\t" + product.getId() + ", \n\t'"
-                + product.getName() + "', \n\t'" + product.getBuildtime() + "', \n\t'" + product.getPrice().getValue()
-                + "', \n\t'" + product.getPrice().getCurrent().value() + "')";
+        Price price = product.getPrice();
+        return "insert into product values(\n\t" + product.getId() +
+                ", \n\t'" + product.getName() +
+                "', \n\t'" + product.getBuildtime() +
+                "', \n\t'" + price.getValue() +
+                "', \n\t'" + price.getCurrent().value() + "')";
     }
 }

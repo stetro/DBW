@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<companies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="companies.xsd">
+    <company>
+        <name>Loma Drehteile GmbH &amp; Co KG</name>
+        <contact>
+            <phone>+49 7429 9303-0</phone>
+            <fax>+49 7429 9303-10</fax>
+            <person>Frau Rosa Dreher</person>
+            <web>http://www.loma-drehteile.com</web>
+        </contact>
+        <address>
+            <street>Eichenstrasse 10</street>
+            <city>D-78598 Königsheim</city>
+        </address>
+        <types>
+            <type>Hersteller</type>
+        </types>
+    </company>
+</companies>

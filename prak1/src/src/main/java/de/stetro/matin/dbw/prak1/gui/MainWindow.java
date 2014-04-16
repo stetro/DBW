@@ -244,4 +244,12 @@ public class MainWindow {
             applicationStatus.setText("Error selecting xml file.");
         }
     }
+
+    public ProductDao getProductDao() {
+        return productDao;
+    }
+
+    public EmployeeDao getEmployeeDao() {
+        return employeeDao;
+    }
 }

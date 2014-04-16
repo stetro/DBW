@@ -10,4 +10,10 @@
         <buildtime>07:05:34</buildtime>
         <price current="euro">14.50</price>
     </product>
+
+    <product id="3">
+        <name>Waeschetrockner A+++</name>
+        <buildtime>07:05:34</buildtime>
+        <price current="euro">540.50</price>
+    </product>
 </products>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="companies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="company" maxOccurs="unbounded" type="company"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="company">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="contact" type="contact"/>
+            <xs:element name="address" type="address"/>
+            <xs:element name="types" type="companyTypes"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="contact">
+        <xs:sequence>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="fax" type="xs:string"/>
+            <xs:element name="person" type="xs:string"/>
+            <xs:element name="web" type="xs:anyURI"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="companyTypes">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

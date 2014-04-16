@@ -3,7 +3,7 @@
     <employee id="12">
         <name>Steffen Tröster</name>
         <department id="23" leading="false">Softwareentwicklung</department>
-        <payment current="euro">2100</payment>
+        <payment current="euro">2100TTT</payment>
         <hometown>Wormbach</hometown>
     </employee>
     <employee id="13">
