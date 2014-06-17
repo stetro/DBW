@@ -87,6 +87,21 @@
             <version>1.4</version>
         </dependency>
 
+        <!--Tools-->
+
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlapi-api</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlapi-apibinding</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
