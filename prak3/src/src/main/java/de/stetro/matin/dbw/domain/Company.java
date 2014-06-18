@@ -19,4 +19,11 @@ public class Company {
     @ManyToMany
     private List<Product> productList;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
